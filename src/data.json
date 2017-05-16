@@ -2,251 +2,375 @@
   "data": [
     {
       "id": 1,
-      "name": "Sarajevo"
+      "name": "Sarajevo",
+	  "lat":43.859,
+	  "lng":18.423
     },
     {
       "id": 2,
-      "name": "Mostar"
+      "name": "Mostar",
+	  "lat": 43.343,
+	  "lng": 17.807
     },
     {
       "id": 3,
-      "name": "Travnik"
+      "name": "Travnik",
+	  "lat": 44.226,
+	  "lng": 17.656
     },
     {
       "id": 4,
-      "name": "Jajce"
+      "name": "Jajce",
+	  "lat": 44.340,
+	  "lng": 17.271
     },
     {
       "id": 5,
-      "name": "Zenica"
+      "name": "Zenica",
+	  "lat": 44.200,
+	  "lng": 17.907
     },
     {
       "id": 6,
-      "name": "Bugojno"
+      "name": "Bugojno",
+	  "lat": 44.055,
+	  "lng": 17.449
     },
     {
       "id": 7,
-      "name": "Donji Vakuf"
+      "name": "Donji Vakuf",
+	  "lat": 44.143,
+	  "lng": 17.398
     },
     {
       "id": 8,
-      "name": "Gornji Vakuf"
+      "name": "Gornji Vakuf",
+	  "lat": 43.937,
+	  "lng": 17.587
     },
     {
       "id": 9,
-      "name": "Biha�"
+      "name": "Biha�",
+	  "lat": 44.811,
+	  "lng": 15.868
     },
     {
       "id": 10,
-      "name": "Br�ko"
+      "name": "Br�ko",
+	  "lat": 44.872,
+	  "lng": 18.810
     },
     {
       "id": 11,
-      "name": "Banja Luka"
+      "name": "Banja Luka",
+	  "lat": 44.771,
+	  "lng": 17.190
     },
     {
       "id": 12,
-      "name": "Visoko"
+      "name": "Visoko",
+	  "lat": 43.988,
+	  "lng": 18.179
     },
     {
       "id": 13,
-      "name": "Prozor"
+      "name": "Prozor",
+	  "lat": 43.800,
+	  "lng": 17.586
     },
     {
       "id": 14,
-      "name": "Bijeljina"
+      "name": "Bijeljina",
+	  "lat": 44.755,
+	  "lng": 19.214
     },
     {
       "id": 15,
-      "name": "Bosanska Krupa"
+      "name": "Bosanska Krupa",
+	  "lat": 44.883,
+	  "lng": 16.153
     },
     {
       "id": 16,
-      "name": "Bosanska Gradi�ka"
+      "name": "Međugorje",
+	  "lat": 43.200,
+	  "lng": 17.662
     },
     {
       "id": 17,
-      "name": "Sanski Most"
+      "name": "Sanski Most",
+	  "lat": 44.763,
+	  "lng": 16.664
     },
     {
       "id": 18,
-      "name": "Breza"
+      "name": "Breza",
+	  "lat": 44.019,
+	  "lng": 18.263
     },
     {
       "id": 19,
-      "name": "Busova�a"
+      "name": "Busova�a",
+	  "lat": 44.098,
+	  "lng": 17.879
     },
     {
       "id": 20,
-      "name": "Bu�im"
+      "name": "Bu�im",
+	  "lat": 45.052,
+	  "lng": 16.056
     },
     {
       "id": 21,
-      "name": "�apljina"
+      "name": "�apljina",
+	  "lat": 43.111,
+	  "lng": 17.697
     },
     {
       "id": 22,
-      "name": "�itluk"
+      "name": "�itluk",
+	  "lat": 43.226,
+	  "lng": 17.698
     },
     {
       "id": 23,
-      "name": "Doboj"
+      "name": "Doboj",
+	  "lat": 44.745,
+	  "lng": 18.087
     },
     {
       "id": 24,
-      "name": "Fo�a"
+      "name": "Fo�a",
+	  "lat": 43.506,
+	  "lng": 18.780
     },
     {
       "id": 25,
-      "name": "Fojnica"
+      "name": "Fojnica",
+	  "lat": 43.963,
+	  "lng": 17.899
     },
     {
       "id": 26,
-      "name": "Grada�ac"
+      "name": "Grada�ac",
+	  "lat": 44.879,
+	  "lng": 18.426
     },
     {
       "id": 27,
-      "name": "Gora�de"
+      "name": "Gora�de",
+	  "lat": 43.669,
+	  "lng": 18.974
     },
     {
       "id": 28,
-      "name": "Jablanica"
+      "name": "Jablanica",
+	  "lat": 43.656,
+	  "lng": 17.758
     },
     {
       "id": 29,
-      "name": "Kakanj"
+      "name": "Kakanj",
+	  "lat": 44.129,
+	  "lng": 18.118
     },
     {
       "id": 30,
-      "name": "Kiseljak"
+      "name": "Kiseljak",
+	  "lat": 43.943,
+	  "lng": 18.076
     },
     {
       "id": 31,
-      "name": "Klju�"
+      "name": "Klju�",
+	  "lat": 44.535,
+	  "lng": 16.774
     },
     {
       "id": 32,
-      "name": "Konjic"
+      "name": "Konjic",
+	  "lat": 43.650,
+	  "lng": 17.964
     },
     {
       "id": 33,
-      "name": "Kre�evo"
+      "name": "Cazin",
+	  "lat": 44.966,
+	  "lng": 15.941
     },
     {
       "id": 34,
-      "name": "Livno"
+      "name": "Livno",
+	  "lat": 43.823,
+	  "lng": 17.007
     },
     {
       "id": 35,
-      "name": "Lukavac"
+      "name": "Lukavac",
+	  "lat": 44.533,
+	  "lng": 18.532
     },
     {
       "id": 36,
-      "name": "Ljubu�ki"
+      "name": "Ljubu�ki",
+	  "lat": 43.195,
+	  "lng": 17.548
     },
     {
       "id": 37,
-      "name": "Maglaj"
+      "name": "Maglaj",
+	  "lat": 44.544,
+	  "lng": 18.097
     },
     {
       "id": 38,
-      "name": "Mrkonji� Grad"
+      "name": "Mrkonji� Grad",
+	  "lat": 44.417,
+	  "lng": 17.085
     },
     {
       "id": 39,
-      "name": "Novi Travnik"
+      "name": "Novi Travnik",
+	  "lat": 44.173,
+	  "lng": 17.661
     },
     {
       "id": 40,
-      "name": "Neum"
+      "name": "Neum",
+	  "lat": 42.923,
+	  "lng": 17.620
     },
     {
       "id": 41,
-      "name": "Olovo"
+      "name": "Olovo",
+	  "lat": 44.126,
+	  "lng": 18.580
     },
     {
       "id": 42,
-      "name": "Ora�je"
+      "name": "Ora�je",
+	  "lat": 45.028,
+	  "lng": 18.695
     },
     {
       "id": 43,
-      "name": "Prijeor"
+      "name": "Prijeor",
+	  "lat": 44.980,
+	  "lng": 16.703
     },
     {
       "id": 44,
-      "name": "Rogatica"
+      "name": "Rogatica",
+	  "lat": 43.799,
+	  "lng": 19.003
     },
     {
       "id": 45,
-      "name": "Srebreica"
+      "name": "Srebrenica",
+	  "lat": 44.102,
+	  "lng": 19.297
     },
     {
       "id": 46,
-      "name": "Srebrenik"
+      "name": "Srebrenik",
+	  "lat": 44.706,
+	  "lng": 18.493
     },
     {
       "id": 47,
-      "name": "Stolac"
+      "name": "Stolac",
+	  "lat": 43.083,
+	  "lng": 17.956
     },
     {
       "id": 48,
-      "name": "�ipovo"
+      "name": "�ipovo",
+	  "lat": 44.285,
+	  "lng": 17.089
     },
     {
       "id": 49,
-      "name": "�iroki Brijeg"
+      "name": "�iroki Brijeg",
+	  "lat": 43.382,
+	  "lng": 17.593
     },
     {
       "id": 50,
-      "name": "Te�anj"
+      "name": "Te�anj",
+	  "lat": 44.615,
+	  "lng": 17.990
     },
     {
       "id": 51,
-      "name": "Tomislavgrad"
+      "name": "Tomislavgrad",
+	  "lat": 43.719,
+	  "lng": 17.228
     },
     {
       "id": 52,
-      "name": "Tuzla"
+      "name": "Tuzla",
+	  "lat": 44.537,
+	  "lng": 18.668
     },
     {
       "id": 53,
-      "name": "Trebinje"
+      "name": "Trebinje",
+	  "lat": 42.712,
+	  "lng": 18.348
     },
     {
       "id": 54,
-      "name": "Usora"
+      "name": "Usora",
+	  "lat": 44.697,
+	  "lng": 17.974
     },
     {
       "id": 55,
-      "name": "Vare�"
+      "name": "Vare�",
+	  "lat": 44.161,
+	  "lng": 18.325
     },
     {
       "id": 56,
-      "name": "Velika Kladu�a"
+      "name": "Velika Kladu�a",
+	  "lat": 45.184,
+	  "lng": 15.806
     },
     {
       "id": 57,
-      "name": "Vi�egrad"
+      "name": "Vi�egrad",
+	  "lat": 43.783,
+	  "lng": 19.293
     },
     {
       "id": 58,
-      "name": "Vitez"
+      "name": "Vitez",
+	  "lat": 44.151,
+	  "lng": 17.790
     },
     {
       "id": 59,
-      "name": "Zavidovi�i"
+      "name": "Zavidovi�i",
+	  "lat": 44.443,
+	  "lng": 18.142
     },
     {
       "id": 60,
-      "name": "Zvornik"
+      "name": "Zvornik",
+	  "lat": 44.386,
+	  "lng": 19.100
     },
     {
       "id": 61,
-      "name": "�ep�e"
+      "name": "�ep�e",
+	  "lat": 44.429,
+	  "lng": 18.038
     },
     {
       "id": 62,
-      "name": "�ivinice"
+      "name": "�ivinice",
+	  "lat": 44.445,
+	  "lng": 18.650
     }
   ]
 }
