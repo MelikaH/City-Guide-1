@@ -107,6 +107,19 @@ body { background-image: url(pls3.jpg);
 					-o-border-radius:5px;
 					-moz-border-radius:5px;
 					font-weight:bolder;
+<<<<<<< HEAD
+=======
+
+
+					}
+/*
+    .inField input[type = text]{
+      left: 43%;
+      top: 43%;
+      display:inline-block; z-index:10;
+    }*/
+
+>>>>>>> fe99d1ad56eb640428bed39decab6151489cfb8f
 
 
 					}
