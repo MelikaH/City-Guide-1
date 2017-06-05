@@ -23,12 +23,18 @@ export class CityService {
 	    return Promise.reject(error.message || error);
 	  }
 
+/*promjena getCity iz by ID u by NAME */
+  getCity(name: string): Promise<City> {
+    return this.getCities()
+      .then(cities => cities.find(city => city.name === name))
+      .catch(this.handleError);
+  }
 
-	getCity(id: number): Promise<City> {
-  		return this.getCities()
-             .then(cities => cities.find(city => city.id === id));
-	}
+  getCityByID(id: number): Promise<City> {
+    return this.getCities()
+      .then(cities => cities.find(city => city.id === id))
+      .catch(this.handleError);
+  }
 
 
 }
-

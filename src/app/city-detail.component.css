@@ -27,3 +27,45 @@ button:disabled {
   color: #ccc; 
   cursor: auto;
 }
+
+
+#nav_wrapper{
+	height:auto;
+	width:100%;
+	background:#377D7A;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:5px;
+	text-align:center;
+	list-style:none;
+	color: #ffffff;
+	display:inline-block;
+	margin-bottom:10px;
+}
+#nav_wrapper ul li {
+	display:inline-block;width:10em;
+	padding:0 25px 0 25px;
+	
+}
+
+#nav_wrapper a{
+	
+	color:white;
+	text-decoration:none;
+	
+	
+}
+
+#nav a:hover{
+	color:#c1c1c1;
+}
+
+
+
+#nav_wrapper ul li:hover{
+
+	transition:all 0.45s;
+	opacity:0.5;
+	filter:alpha(opacity=75);
+}
+

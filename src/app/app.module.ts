@@ -10,11 +10,12 @@ import { DashboardComponent }  from './dashboard.component';
 import { CityService }  from './city.service';
 import { CityDetailComponent } from './city-detail.component';
 import { AppRoutingModule }     from './app-routing.module';
+import {StateService} from './state.service';
 
 @NgModule({
   imports:      [ BrowserModule , FormsModule, AppRoutingModule, HttpModule	],
   declarations: [ AppComponent, CitiesComponent, DashboardComponent, CityDetailComponent ],
   bootstrap:    [ AppComponent ],
-  providers:    [CityService],
+  providers:    [CityService, StateService],
 })
 export class AppModule { }

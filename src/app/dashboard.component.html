@@ -10,16 +10,20 @@
 
 <!DOCTYPE html>
 <html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <body>
-		
-	<div class="inField">
-		<h2 align="center">Welcome to the City Guide! Please enter the city.</h2>
-	<form>
-		<input type="text" placeholder="ex. Sarajevo" id="search" action="" method="get">
-		<br>
-		<br>
-		<button type="button" id="detailButton" (click)="gotoDetail()">GO!</button>
-	</form>
-	</div>
+
+<div class="inField" id = "pocetni">
+  <h2 align="center">Welcome to the City Guide! Please enter the city.</h2>
+  <br>
+  <h2 align="center">You entered {{choice}}.</h2>
+  <br>
+  <form class="form-inline">
+    <input type="text" [(ngModel)]="choice" placeholder="ex. Sarajevo" name="first" id = "search">
+    <button type="submit" class="btn" (click)="goToChoice(choice)">GO!</button>
+  </form>
+</div>
 </body>
 </html>

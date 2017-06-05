@@ -28,12 +28,12 @@ export class CityDetailComponent implements OnInit , AfterViewChecked{
 
 ngOnInit(): void {
   this.route.params
-    .switchMap((params: Params) => this.cityService.getCity(+params['id']))
+    .switchMap((params: Params) => this.cityService.getCityByID(+params['id']))
     .subscribe(city => {this.city = city;});
 	}
-	
+
 ngAfterViewChecked(): void {
-	if(document.getElementById('map')!=null && this.map==null)
+	if(document.getElementById('map') != null && this.map == null)
 		this.initMap();
 }
 
@@ -43,7 +43,6 @@ goBack(): void {
 
 save(): void {
 }
-
 
 private map:any=null;
 initMap(): void {

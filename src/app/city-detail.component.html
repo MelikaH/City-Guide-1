@@ -1,19 +1,68 @@
-<div *ngIf="city">
-  <h2>{{city.name}} details!</h2>
-  <div>
-    <label>id: </label>{{city.id}}</div>
-  <div>
-    <label>name: </label>
-    <input [(ngModel)]="city.name" placeholder="name" />
-  </div>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="city-detail.component.css">
+  <style>
+    .flex-container {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+      text-align: center;
+    }
+    .flex-container > * {
+      padding: 15px;
+      -webkit-flex: 1 100%;
+      flex: 1 100%;
+    }
+    .article {
+      text-align: left;
+    }
+    header {background: black;color:white;}
+    footer {background: #aaa;color:white;}
+    .nav {background:#eee;}
+    .nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .nav ul a {
+      text-decoration: none;
+    }
+    @media all and (min-width: 768px) {
+      .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+      .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+      footer {-webkit-order:3;order:3;}
+    }
+  </style>
+</head>
+<body>
 
+<div class="flex-container">
+  <header>
+    <h1>City Gallery</h1>
+  </header>
 
-		<div id="map" style="width:500px;height:250px">
-	</div>
+  <article>
+    <div *ngIf="city">
+      <h2>{{city.name}} details:</h2>
+		<div id="nav_wrapper">
+			<ul>
+				<li><a href="#">Accommodation</a></li>
+				<li><a href="#">Food</a></li>
+				<li><a href="#">Places</a></li>
+			</ul>
+		</div>
+	  
+      <div id="map" style="position:center;width:100%;height:450px">
+      </div>
 
-	
-  <button (click)="save()">Save</button>
+      <button (click)="goBack()">Back</button>
+    </div>
+  </article>
 
-  
-  <button (click)="goBack()">Back</button>
+  <footer>City-Guide B&H 2017</footer>
 </div>
+
+</body>
+</html>
+
