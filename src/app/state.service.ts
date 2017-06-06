@@ -16,8 +16,4 @@ export class StateService {
   setChoice(newCohice: string): void {
     this.choice = newCohice;
   };
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> fe99d1ad56eb640428bed39decab6151489cfb8f
