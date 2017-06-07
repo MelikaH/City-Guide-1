@@ -12,26 +12,22 @@ declare var google: any;
   selector: 'my-city-detail',
   templateUrl: './app/city-detail.component.html',
   styleUrls: [ './app/city-detail.component.css' ],
- 
 })
 
-export class CityDetailComponent implements OnInit , AfterViewChecked{
-	@Input()
-	city: City;
-
-	constructor(
-  private cityService: CityService,
-  private route: ActivatedRoute,
-  private location: Location
+export class CityDetailComponent implements OnInit , AfterViewChecked {
+  @Input() city: City;
+  constructor(
+    private cityService: CityService,
+    private route: ActivatedRoute,
+    private location: Location
 ) {
-
 }
 
 ngOnInit(): void {
   this.route.params
     .switchMap((params: Params) => this.cityService.getCityByID(+params['id']))
-    .subscribe(city => {this.city = city;});
-	}
+    .subscribe(city => {this.city = city; } );
+  }
 
 ngAfterViewChecked(): void {
 	if(document.getElementById('map') != null && this.map == null)
@@ -57,5 +53,5 @@ initMap(): void {
           map: this.map
         });
 
-}
+  }
 }
