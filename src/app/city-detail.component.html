@@ -18,7 +18,7 @@
     .article {
       text-align: left;
     }
-    header {background:black;color:white;}
+    /*header {background:black;color:white;}*/
     footer {background: #aaa;color:white;}
     .nav {background:#eee;}
     .nav ul {
@@ -37,8 +37,8 @@
 </head>
 <body>
 
-<div class="flex-container">
-  <header>
+<div class="flex-container" *ngIf="city">
+  <header [style.background-image]="'url(' + city.image + ')'" [style.background-size]="'cover'">
     <h1>City Gallery</h1>
   </header>
 
