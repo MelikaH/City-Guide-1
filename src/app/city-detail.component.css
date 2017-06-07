@@ -30,7 +30,16 @@ button:disabled {
   cursor: auto;
 }
 
+header{
+	height:400px;
+}
 
+h1{	
+	font-size:40px;
+	color:white;
+	text-shadow:3px 3px 0 #000;
+	text-decoration:underline;
+}
 #nav_wrapper{
 	height:auto;
 	width:100%;
