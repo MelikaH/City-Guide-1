@@ -31,8 +31,10 @@ export class DashboardComponent implements OnInit {
    */
   goToChoice(c: string) {
       this.stateService.setChoice(c);
-      this.cityService.getCity(c).then(found_city => this.found_city = found_city);
-      this.id = this.found_city.id;
-      this.router.navigate(['./detail/', this.id]);
+      this.cityService.getCity(c).then((found_city) => {
+        this.found_city = found_city;
+        this.id = this.found_city.id;
+        this.router.navigate(['./detail/', this.id]);
+      });
   }
 }

@@ -10,11 +10,13 @@ import { DashboardComponent }  from './dashboard.component';
 import { CityService }  from './city.service';
 import { CityDetailComponent } from './city-detail.component';
 import { AppRoutingModule }     from './app-routing.module';
-import {StateService} from './state.service';
+import { StateService } from './state.service';
+import { AccomodationComponent } from './accomodation.component';
+import { FoodComponent } from './food.component';
 
 @NgModule({
   imports:      [ BrowserModule , FormsModule, AppRoutingModule, HttpModule	],
-  declarations: [ AppComponent, CitiesComponent, DashboardComponent, CityDetailComponent ],
+  declarations: [ AppComponent, CitiesComponent, DashboardComponent, CityDetailComponent, AccomodationComponent, FoodComponent],
   bootstrap:    [ AppComponent ],
   providers:    [CityService, StateService],
 })

@@ -33,7 +33,6 @@ describe('test for input ', function () {
 
   it('clicking on details jumps to details about Sarajevo', function () {
     element(by.id('goBtn')).click();
-    element(by.id('goBtn')).click();
     expect(browser.getCurrentUrl()).toContain('detail/1');
   });
 
@@ -42,14 +41,12 @@ describe('test for input ', function () {
     element(by.id('search')).clear();
     element(by.id('search')).sendKeys('Travnik');
     element(by.id('goBtn')).click();
-    element(by.id('goBtn')).click();
     expect(browser.getCurrentUrl()).toContain('detail/3');
   });
 
   it('Typing in Zenica and clicking GO goes to Zenica details page', function () {
     element(by.id('search')).clear();
     element(by.id('search')).sendKeys('Zenica');
-    element(by.id('goBtn')).click();
     element(by.id('goBtn')).click();
     expect(browser.getCurrentUrl()).toContain('detail/5');
   });

@@ -11,7 +11,8 @@ declare var google: any;
 @Component({
   selector: 'my-city-detail',
   templateUrl: './app/city-detail.component.html',
-  styleUrls: [ './app/city-detail.component.css' ]
+  styleUrls: [ './app/city-detail.component.css' ],
+ 
 })
 
 export class CityDetailComponent implements OnInit , AfterViewChecked{
@@ -36,6 +37,7 @@ ngAfterViewChecked(): void {
 	if(document.getElementById('map') != null && this.map == null)
 		this.initMap();
 }
+
 
 goBack(): void {
   this.location.back();
