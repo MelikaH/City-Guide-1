@@ -1,12 +1,4 @@
-label {
-  display: inline-block;
-  width: 3em;
-  margin: .5em 0;
-  color: #607D8B;
-  font-weight: bold;
-  font-family: Calibri;
-  
-}
+
 input {
   height: 2em;
   font-size: 1em;
@@ -31,6 +23,11 @@ button:disabled {
   cursor: auto;
 }
 
+h1{
+	font-size:30px;
+	padding:60px;
+
+}
 
 #nav_wrapper{
   height:auto;
