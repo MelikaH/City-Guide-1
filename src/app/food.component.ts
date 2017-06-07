@@ -36,9 +36,9 @@ export class FoodComponent implements OnInit, AfterViewChecked{
       .subscribe(city => {this.city = city; } );
   }
 
-  ngAfterViewChecked(): void {/*
+  ngAfterViewChecked(): void {
    if(document.getElementById('map') != null && this.map == null)
-   this.initMap();*/
+   this.initMap();
   }
 
   goBack(): void {
@@ -48,7 +48,7 @@ export class FoodComponent implements OnInit, AfterViewChecked{
   save(): void {
   }
 
-  /*
+  
    private map:any=null;
    initMap(): void {
    this.map = new google.maps.Map(document.getElementById('map'), {
@@ -58,6 +58,6 @@ export class FoodComponent implements OnInit, AfterViewChecked{
    var marker = new google.maps.Marker({
    position: new google.maps.LatLng(this.city.lat,this.city.lng),
    map: this.map
-   });*/
+   });
 
 }

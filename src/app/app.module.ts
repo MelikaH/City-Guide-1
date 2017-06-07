@@ -13,10 +13,11 @@ import { AppRoutingModule }     from './app-routing.module';
 import { StateService } from './state.service';
 import { AccomodationComponent } from './accomodation.component';
 import { FoodComponent } from './food.component';
+import { PlacesComponent } from './places.component';
 
 @NgModule({
   imports:      [ BrowserModule , FormsModule, AppRoutingModule, HttpModule	],
-  declarations: [ AppComponent, CitiesComponent, DashboardComponent, CityDetailComponent, AccomodationComponent, FoodComponent],
+  declarations: [ AppComponent, CitiesComponent, DashboardComponent, CityDetailComponent, AccomodationComponent, FoodComponent, PlacesComponent],
   bootstrap:    [ AppComponent ],
   providers:    [CityService, StateService],
 })

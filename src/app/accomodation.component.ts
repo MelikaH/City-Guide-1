@@ -59,3 +59,6 @@ export class AccomodationComponent implements OnInit , AfterViewChecked {
 
   }
 }
+
+
+ 

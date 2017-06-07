@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="accomodation.component.css">
+  <link rel="stylesheet" type="text/css" href="places.component.css">
   <style>
     .flex-container {
       display: -webkit-flex;
@@ -18,7 +18,7 @@
     .article {
       text-align: left;
     }
-    header {height: 250px;background:url("http://www.visitmycountry.net/bosnia_herzegovina/bh/images/stories/turizam/eko/etno_begovo_selo/etno_brgovo_selo_002.jpg");background-size:cover; color:black;}
+    header {height: 250px;background:url("https://secure.ponudadana.hr/images/offers/23487/Rafting_na_Neretvi___2_dana_s_punim_pansionom.jpg?v=6");background-size:cover; color:black;}
     footer {background: #aaa;color:white;}
     .nav {background:#eee;}
     .nav ul {
@@ -38,13 +38,13 @@
 <body>
   <div class="flex-container">
     <header>
-      <div id="header" style="position:center;font-size:larger;font-family:'SF UI Display'; width:100%">
-      <h1>Places to Visit in {{city.name}}</h1>
+      <div id="header" style="position:center;font-size:larger;font-family:'SF UI Display'; width:100%" *ngIf="city">
+      <h1>Places to Visit in {{city.name}}:</h1>
       </div>
     </header>
 
-      <article>
-        <div *ngIf="city" id="nav1" style="position:center;font-family:'SF UI Display';">
+      <article *ngIf="city" >
+        <div  id="nav1" style="position:center;font-family:'SF UI Display';">
             
           <div id="information" style="text-align:left;text-align:left; font-family: 'SF UI Display' border-width:100px; border-height:100px">
             <h3>More about properties in {{city.name}}</h3>
@@ -57,7 +57,7 @@
             <h4>List of the most popular properties in {{city.name}} among tourists </h4>
           </div>
         </div>
-      </article>
+   
 
 
       <h5>Find attractions on a map</h5>
@@ -66,6 +66,8 @@
       <div id="button" style="text-align:center;font-family: 'SF UI Display'">
         <button (click)="goBack()">Back</button>
       </div>
+	  
+	 </article>
     <footer> Copyright &copy; City-Guide B&H 2017</footer>
   </div>
 </body>

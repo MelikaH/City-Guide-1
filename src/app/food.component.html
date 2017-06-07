@@ -38,15 +38,15 @@
 <body>
   <div class="flex-container">
     <header>
-      <div id="header" style="position:center;font-size:larger;font-family:'SF UI Display'; width:100%">
+      <div id="header" style="position:center;font-size:larger;font-family:'SF UI Display'; width:100%" *ngIf="city">
       <h1>Food Source</h1>
       </div>
     </header>
 
-      <article>
-        <div *ngIf="city" id="nav1" style="position:center;font-family:'SF UI Display';">
+      <article *ngIf="city" >
+        <div  id="nav1" style="position:center;font-family:'SF UI Display';">
             <h2>Places to Eat in {{city.name}} :</h2>
-            <>
+            
 
           <div id="information" style="text-align:left;text-align:left; font-family: 'SF UI Display' border-width:100px; border-height:100px">
             <h3>More about properties in {{city.name}}</h3>
@@ -59,7 +59,7 @@
             <h4>List of the most popular properties in {{city.name}} among tourists </h4>
           </div>
         </div>
-      </article>
+     
 
 
       <h5>Find your property on the map</h5>
@@ -68,6 +68,9 @@
       <div id="button" style="text-align:center;font-family: 'SF UI Display'">
         <button (click)="goBack()">Back</button>
       </div>
+	  
+	 </article>
+	   
     <footer> Copyright &copy; City-Guide B&H 2017</footer>
   </div>
 </body>
