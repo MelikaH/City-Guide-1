@@ -56,5 +56,5 @@ export class PlacesComponent implements OnInit, AfterViewChecked{
    position: new google.maps.LatLng(this.city.lat,this.city.lng),
    map: this.map
    });
-
+}
 }

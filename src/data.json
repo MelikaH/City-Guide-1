@@ -35,7 +35,7 @@
       "name": "Zenica",
 	  "lat": 44.200,
 	  "lng": 17.907,
-		"image":"http://www.zedoturizam.ba/media/k2/items/cache/d48ed900e79fa9547169c26138b4cd8d_XL.jpg"   
+		"image":"http://www.visitmycountry.net/bosnia_herzegovina/bh/images/stories/destinacije/fbih/zenica/photos/zenica_01.jpg"   
 	},
 	{
       "id": 6,
@@ -49,21 +49,21 @@
       "name": "Donji Vakuf",
 	  "lat": 44.143,
 	  "lng": 17.398,
-	  "image":"http://www.visitmycountry.net/bosnia_herzegovina/bh/images/stories/destinacije/fbih/donji_vakuf/donji_vakuf_002.jpg"
+	  "image":"http://www.avaz.ba/storage/2016/03/30/thumbs/56fb850b-3340-4d3b-872f-04da0a0a0a64-1509034-1297738663588935-4641457486260564278-n-718x446.jpg"
     },
     {
       "id": 8,
       "name": "Gornji Vakuf",
 	  "lat": 43.937,
 	  "lng": 17.587,
-	  "image":"http://bosnapress.net/wp-content/uploads/2016/03/Gornji-Vakuf.jpg"
+	  "image":"http://www.prozor-x.com/wp-content/uploads/2016/04/gornji_vakuf.jpg"
     },
     {
       "id": 9,
       "name": "Bihać",
 	  "lat": 44.811,
 	  "lng": 15.868,
-	  "image":"http://p4.storage.canalblog.com/42/56/1122988/86086323_o.jpg"
+	  "image":"http://www.raftinguna.com/images/rijeka-una-sadrzaj/rijeka-una-grad-bihac-rafting-una-com.jpg"
     },
     {
       "id": 10,
@@ -77,7 +77,7 @@
       "name": "Banja Luka",
 	  "lat": 44.771,
 	  "lng": 17.190,
-	  "image":"https://s-media-cache-ak0.pinimg.com/originals/a3/5a/60/a35a60a2438163064eb992dd32e28664.jpg"
+	  "image":"http://wikitravel.org/upload/shared//5/57/Banja_Luka_Banner.jpg"
     },
     {
       "id": 12,
@@ -98,7 +98,7 @@
       "name": "Bijeljina",
 	  "lat": 44.755,
 	  "lng": 19.214,
-	  "image":"http://www.prooffice.ba/wp-content/uploads/2014/12/gal_9_slika_298_velika.jpg"
+	  "image":"http://www.infobijeljina.com/GalleryImages/27_2473.jpg"
     },
     {
       "id": 15,
@@ -119,7 +119,7 @@
       "name": "Sanski Most",
 	  "lat": 44.763,
 	  "lng": 16.664,
-	  "image":"http://www.inmedia.ba/wp-content/uploads/2012/10/Hamzibegova-Dzamija-in-Sanski-Most-Bosnia-Herzegovina.jpg"
+	  "image":"https://i.ytimg.com/vi/02S2ap82lZg/maxresdefault.jpg"
     },
     {
       "id": 18,
@@ -140,7 +140,7 @@
       "name": "Bužim",
 	  "lat": 45.052,
 	  "lng": 16.056,
-	  "image":"http://www.visitmycountry.net/bosnia_herzegovina/bh/images/stories/destinacije/fbih/buzim/buzim_005.jpg"
+	  "image":"http://static.panoramio.com/photos/original/79527826.jpg"
     },
     {
       "id": 21,
@@ -161,8 +161,7 @@
       "name": "Doboj",
 	  "lat": 44.745,
 	  "lng": 18.087,
-	  "image":"http://ocdn.eu/pulscms-transforms/1/35fktkqTURBXy9iMTJjNWEyNDJjYWFjNjU1YWU2YTk1ZDIxMzdjZThiOC5qcGVnk5UCzQMUAMLDlQLNAdYAwsOVB9kyL3B1bHNjbXMvTURBXy8xZDc0Y2I0MTcwNTk1MDQzNjYyOWNhYmQ2MDZmNTBmNi5wbmcHwgA"
-    },
+	  "image":"http://static.panoramio.com/photos/large/15847372.jpg"},
     {
       "id": 24,
       "name": "Foča",
@@ -175,28 +174,28 @@
       "name": "Fojnica",
 	  "lat": 43.963,
 	  "lng": 17.899,
-	  "image":"http://www.esiweb.org/balkanexpress/images/bosnia/fojnica.jpg"
+	  "image":"http://bosniandream.com/storage/app/media/katalog/fojnica2.jpg"
     },
     {
       "id": 26,
       "name": "Gradačac",
 	  "lat": 44.879,
 	  "lng": 18.426,
-	  "image":"http://www.rent-a-car-tuzla.ba/wp-content/uploads/2016/06/husein-kapetan-gradascevic-kula.jpg"
+	  "image":"http://gradacac.org/wp-content/uploads/2015/03/22.jpg"
     },
     {
       "id": 27,
       "name": "Goražde",
 	  "lat": 43.669,
 	  "lng": 18.974,
-	  "image":"https://static.klix.ba/media/images/vijesti/130525025.1_mn.jpg?v=1"
+	  "image":"http://s9.postimage.org/l89oxr3fz/Gorazde3.jpg"
     },
     {
       "id": 28,
       "name": "Jablanica",
 	  "lat": 43.656,
 	  "lng": 17.758,
-	  "image":"http://www.bljesak.info/Thumb/322x218/jablanica-panorama-2016.jpg"
+	  "image":"http://www.devimtours.com/img/photo-gallery/Jablanicka/o/tito-partizan-war.jpg"
     },
     {
       "id": 29,
@@ -224,21 +223,20 @@
       "name": "Konjic",
 	  "lat": 43.650,
 	  "lng": 17.964,
-	  "image":"http://www.adristorical-lands.hercegovina.ba/index.php/bs/galerija/galerija-blagaj/20-stari-most-konjic/detail/174-stari-most-konjic?tmpl=component&phocadownload=2"
-    },
+	  "image":"http://farm4.staticflickr.com/3756/9321172596_3859ba40c7_b.jpg"},
     {
       "id": 33,
       "name": "Cazin",
 	  "lat": 44.966,
 	  "lng": 15.941,
-	  "image":"http://balkans.aljazeera.net/sites/default/files/styles/d8/public/cazin_main_0.jpg?itok=T9b7Mdm4"
+	  "image":"https://cdn.flii.by/image/ram0l6l86b0.jpg"
     },
     {
       "id": 34,
       "name": "Livno",
 	  "lat": 43.823,
 	  "lng": 17.007,
-	  "image":"http://bih-x.info/wp-content/uploads/2011/11/Livno.jpg"
+	  "image":"http://static.panoramio.com/photos/large/38699626.jpg"
     },
     {
       "id": 35,
@@ -259,14 +257,14 @@
       "name": "Maglaj",
 	  "lat": 44.544,
 	  "lng": 18.097,
-	  "image":"http://bih-x.info/wp-content/uploads/2010/03/Maglaj.jpg"
+	  "image":"http://divithana.com/wp-content/uploads/2014/06/75081_484376554942482_1928817990_n-660x330.jpg"
     },
     {
       "id": 38,
-      "name": "Mrkonji  Grad",
+      "name": "Mrkonjić Grad",
 	  "lat": 44.417,
 	  "lng": 17.085,
-	  "image":"http://www.mrkonjic-grad.rs/sajt/doc/image/galeri_sr/50_gal.jpg"
+	  "image":"http://www.mrkonjic-grad.rs/sajt/doc/image/galeri_sr/52_gal.jpg"
     },
     {
       "id": 39,
@@ -280,15 +278,14 @@
       "name": "Neum",
 	  "lat": 42.923,
 	  "lng": 17.620,
-	  "image":"http://www.klek.info/photo/neum/neum05.jpg"
+	  "image":"http://static.abcmagazin.info/Slike/590x363/neum1110.jpg"
     },
     {
       "id": 41,
       "name": "Olovo",
 	  "lat": 44.126,
 	  "lng": 18.580,
-	  "image":"http://www.cs.unca.edu/~boyd/touring/tour08/day07/olovo-from%20farher-up-the-road.jpg"
-    },
+	  "image":"http://www.medjugorje-info.com/images/_SLIKE_VIJESTI/gospa-olovska-svetiste.jpg"},
     {
       "id": 42,
       "name": "Orašje",
@@ -308,14 +305,14 @@
       "name": "Rogatica",
 	  "lat": 43.799,
 	  "lng": 19.003,
-	  "image":"http://www.visitmycountry.net/bosnia_herzegovina/bh/images/stories/destinacije/rs/rogatica/rogatica_002.jpg"
+	  "image":"http://rogaticani.com/wp-content/uploads/2014/05/panorama2.jpg"
     },
     {
       "id": 45,
       "name": "Srebrenica",
 	  "lat": 44.102,
 	  "lng": 19.297,
-	  "image":"http://novi.ba/storage/2016/02/04/thumbs/56b28822-3594-4a8f-b5ff-2e3f0a0a0a6c-srebrenica-grad-690x480.jpg"
+	  "image":"https://s-media-cache-ak0.pinimg.com/736x/c8/d5/7c/c8d57caa97bf339f244f40c201af8ebe.jpg"
     },
     {
       "id": 46,
@@ -364,14 +361,14 @@
       "name": "Tuzla",
 	  "lat": 44.537,
 	  "lng": 18.668,
-	  "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Tuzla%2C_Kapija_place.jpg/394px-Tuzla%2C_Kapija_place.jpg"
+	  "image":"http://www.come-enjoy-bosnia.com/data/02_tuzla.JPG"
     },
     {
       "id": 53,
       "name": "Trebinje",
 	  "lat": 42.712,
 	  "lng": 18.348,
-	  "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Trebinje_River.jpg/1200px-Trebinje_River.jpg"
+	  "image":"http://81.93.84.110/wp-content/uploads/2016/05/Trebinje-2.jpg"
     },
     {
       "id": 54,
@@ -385,21 +382,21 @@
       "name": "Vareš",
 	  "lat": 44.161,
 	  "lng": 18.325,
-	  "image":"http://bih-x.info/wp-content/uploads/2010/03/Vare%C5%A1.jpg"
+	  "image":"http://bhvision.com/wp-content/uploads/2015/08/bobovac-cover.jpg"
     },
     {
       "id": 56,
       "name": "Velika Kladuša",
 	  "lat": 45.184,
 	  "lng": 15.806,
-	  "image":"https://s-media-cache-ak0.pinimg.com/originals/ec/cc/20/eccc202d58832a886d619c7fd3c6a957.jpg"
+	  "image":"http://www.phone-travel.com/fajlovi/idea/users/stari-grad-velika-kladusa-stari-grad-kladusa-1_51b07beeee9bf.jpg"
     },
     {
       "id": 57,
       "name": "Višegrad",
 	  "lat": 43.783,
 	  "lng": 19.293,
-	  "image":"http://invictatravel.com/wp-content/uploads/2016/05/Visegrad.jpg"
+	  "image":"http://sarajevobosniatours.ba/wp-content/uploads/Visegrad.jpg"
     },
     {
       "id": 58,
@@ -413,7 +410,7 @@
       "name": "Zavidovići",
 	  "lat": 44.443,
 	  "lng": 18.142,
-	  "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Zav8.jpg/250px-Zav8.jpg"
+	  "image":"http://www.direktno.ba/wp-content/uploads/2016/04/kugla-650x433.jpg"
     },
     {
       "id": 60,
@@ -427,7 +424,7 @@
       "name": "Žepče",
 	  "lat": 44.429,
 	  "lng": 18.038,
-	  "image":"http://opcina-zepce.com/images/zepce_banner_400.jpg"
+	  "image":"http://bh-itinerary.com/images/bt_property/55/original-1458143991-Op%C4%87ina%20%C5%BDep%C4%8De.jpg"
     },
     {
       "id": 62,

@@ -61,3 +61,4 @@ export class FoodComponent implements OnInit, AfterViewChecked{
    });
 
 }
+}

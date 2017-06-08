@@ -36,8 +36,18 @@ describe('test for input ', function () {
     expect(browser.getCurrentUrl()).toContain('detail/1');
   });
 
+describe('login page', function() {
 
-  it('Tping in Travnik and clicking GO goes to Travnik details page', function () {
+  var params = browser.params;
+
+  it('should login successfully', function() {
+    element( by.id('search') ).sendKeys( params.login.user );
+    element( by.id('goBtn') ).click();
+    expect( element(by.type('text') ).getText() ).toEqual( params.login.user );
+  });
+
+});
+  it('Typing in Travnik and clicking GO goes to Travnik details page', function () {
     element(by.id('search')).clear();
     element(by.id('search')).sendKeys('Travnik');
     element(by.id('goBtn')).click();
@@ -59,3 +69,6 @@ describe('test for input ', function () {
   });
 
 });
+
+
+
