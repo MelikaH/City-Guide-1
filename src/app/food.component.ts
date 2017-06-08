@@ -52,7 +52,7 @@ export class FoodComponent implements OnInit, AfterViewChecked{
    private map:any=null;
    initMap(): void {
    this.map = new google.maps.Map(document.getElementById('map'), {
-   zoom: 10,
+   zoom: 15,
    center: new google.maps.LatLng(this.city.lat,this.city.lng)
    });
    var marker = new google.maps.Marker({

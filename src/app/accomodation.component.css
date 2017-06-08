@@ -1,4 +1,16 @@
+#information{
+	width:35%;
+	height:600px;
+	float:left;
+	border:solid 10px white;
+}
 
+#leftPanel{
+	width:65%;
+	height:600%;
+	float:right;
+	margin-left:10px;
+}
 input {
   height: 2em;
   font-size: 1em;
@@ -33,44 +45,3 @@ h1{
 	
 }
 
-#nav_wrapper{
-  height:auto;
-  width:100%;
-  background:#377D7A;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:5px;
-  text-align:center;
-  list-style:none;
-  color: #ffffff;
-  display:inline-block;
-  margin-bottom:10px;
-  font-family: Calibri;
-}
-#nav_wrapper ul li {
-  display:inline-block;width:10em;
-  padding:0 25px 0 25px;
-  font-family: Calibri;
-
-}
-
-#nav_wrapper a{
-
-  color:white;
-  text-decoration:none;
-  font-family: Calibri;
-
-
-}
-
-#nav a:hover{
-  color:#c1c1c1;
-}
-
-#nav_wrapper ul li:hover{
-
-  transition:all 0.45s;
-  opacity:0.5;
-  filter:alpha(opacity=75);
-  font-family: Calibri;
-}

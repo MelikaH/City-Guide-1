@@ -1,6 +1,25 @@
+#information{
+	width:35%;
+	height:600px;
+	float:left;
+	border:solid 10px white;
+}
+
+#leftPanel{
+	width:65%;
+	height:600%;
+	float:right;
+	margin-left:10px;
+}
+input {
+  height: 2em;
+  font-size: 1em;
+  padding-left: .4em;
+  font-family: Calibri;
+}
 button {
   margin-top: 20px;
-  font-family: Arial;
+  font-family: Calibri;
   background-color: #eee;
   border: none;
   padding: 5px 10px;
@@ -12,69 +31,17 @@ button:hover {
 }
 button:disabled {
   background-color: #eee;
-  color: #ccc; 
+  color: #ccc;
   cursor: auto;
 }
 
-label {
-  display: inline-block;
-  width: 3em;
-  margin: .5em 0;
-  color: #607D8B;
-  font-weight: bold;
-
-  
-}
-
-
-header{
-	height:400px;
-}
-
-h1{	
-	padding:30px;
-	font-size:40px;
+h1{
 	color:white;
-	text-shadow:3px 3px 0 #000;
+	font-size:50px;
+	padding-top:20px;
 	text-decoration:underline;
-}
-#nav_wrapper{
-	height:auto;
-	width:100%;
-	background:#377D7A;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:5px;
-	text-align:center;
-	list-style:none;
-	color: #ffffff;
-	display:inline-block;
-	margin-bottom:10px;
-}
-#nav_wrapper ul li {
-	display:inline-block;width:10em;
-	padding:0 25px 0 25px;
+	margin-right:12px;
+	text-shadow:3px 3px 0 #000;
 	
-}
-
-#nav_wrapper a{
-	
-	color:white;
-	text-decoration:none;
-	
-	
-}
-
-#nav a:hover{
-	color:#c1c1c1;
-}
-
-
-
-#nav_wrapper ul li:hover{
-
-	transition:all 0.45s;
-	opacity:0.5;
-	filter:alpha(opacity=75);
 }
 

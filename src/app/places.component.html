@@ -18,7 +18,7 @@
     .article {
       text-align: left;
     }
-    header {height: 250px;background:url("https://secure.ponudadana.hr/images/offers/23487/Rafting_na_Neretvi___2_dana_s_punim_pansionom.jpg?v=6");background-size:cover; color:black;}
+    header {height: 250px;background:url("http://www.slovenia-explorer.com/wp-content/uploads/36-Rafting-on-So%C4%8Da-river_Bovec-and-So%C4%8Da-valley-adrenaline-activities_shutterstock-2.jpg");background-size:cover; color:black;}
     footer {background: #aaa;color:white;}
     .nav {background:#eee;}
     .nav ul {
@@ -39,35 +39,34 @@
   <div class="flex-container">
     <header>
       <div id="header" style="position:center;font-size:larger;font-family:'SF UI Display'; width:100%" *ngIf="city">
-      <h1>Places to Visit in {{city.name}}:</h1>
+      <h1>Places to visit in {{city.name}}:</h1>
       </div>
     </header>
 
-      <article *ngIf="city" >
-        <div  id="nav1" style="position:center;font-family:'SF UI Display';">
-            
+      <article *ngIf="city">
+       
+        
+
           <div id="information" style="text-align:left;text-align:left; font-family: 'SF UI Display' border-width:100px; border-height:100px">
             <h3>More about properties in {{city.name}}</h3>
             <p>{{city.name}} offers many properties for each pocket.</p>
             <p> All of the properties in town are very popular among tourists.</p>
             <p> Prices in {{city.name}} are not too expensive, but you can count on some expensive ones.</p>
           </div>
-
-          <div id="navigare1" style="text-align:left; font-family: 'SF UI Display'">
-            <h4>List of the most popular properties in {{city.name}} among tourists </h4>
-          </div>
-        </div>
-   
-
-
-      <h5>Find attractions on a map</h5>
-      <div id="map" style="position:center;width:100%;height:450px">
-      </div>
+		  
+		<div id="center"></div>
+        
+      <div id="LeftPanel">
+	  <h5>Find your property on the map</h5>
+      <div id="map" style="position:center;width:60%;height:549px;">
+      </div></div>
+	  
       <div id="button" style="text-align:center;font-family: 'SF UI Display'">
         <button (click)="goBack()">Back</button>
       </div>
 	  
-	 </article>
+
+	  </article>
     <footer> Copyright &copy; City-Guide B&H 2017</footer>
   </div>
 </body>

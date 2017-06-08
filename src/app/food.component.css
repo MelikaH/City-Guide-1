@@ -1,0 +1,47 @@
+#information{
+	width:35%;
+	height:600px;
+	float:left;
+	border:solid 10px white;
+}
+
+#leftPanel{
+	width:65%;
+	height:600%;
+	float:right;
+	margin-left:10px;
+}
+input {
+  height: 2em;
+  font-size: 1em;
+  padding-left: .4em;
+  font-family: Calibri;
+}
+button {
+  margin-top: 20px;
+  font-family: Calibri;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer; cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+
+h1{
+	color:white;
+	font-size:50px;
+	padding:80px;
+	text-decoration:underline;
+	margin-right:12px;
+	text-shadow:3px 3px 0 #000;
+	
+}
+
