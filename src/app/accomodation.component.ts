@@ -15,7 +15,6 @@ let infoWindow: any;
 let service: any;
 let request: any;
 let map: any = null;
-let found_places: any[] = [];
 
 @Component({
   selector: 'accomodation-detail',
@@ -25,6 +24,7 @@ let found_places: any[] = [];
 
 export class AccomodationComponent implements OnInit , AfterViewChecked {
   found_places: any[] = [];
+  information: any;
   @Input() city: City;
 
   constructor(private cityService: CityService,
@@ -95,64 +95,32 @@ export class AccomodationComponent implements OnInit , AfterViewChecked {
 
      }*/
     this.ngZone.runOutsideAngular(() => {
-      /*
-      service.radarSearch(request, function (results: any, status: any) {
-        if (status !== google.maps.places.PlacesServiceStatus.OK) {
-          console.error(status);
-          return;
-        }
-        console.log("radarSearch returned " + results.length + " results");
-        for (var i = 0; i < results.length; i++) {
-          console.log(results[i].place_id);
-          (function (j) {
-            var request1 = {
-              placeId: results[i].place_id
-            };
-            service = new google.maps.places.PlacesService(map);
-            setTimeout(function () {
-              service.getDetails(request1, function (place: any, status1: any) {
-                console.log("ENTERED CALLBACK2 " + place.place_id);
-                console.log("ENTERED CALLBACK2 " + place.name);
-                if (status1 === google.maps.places.PlacesServiceStatus.OK) {
-                  var photos = place.photos;
-                  var marker = new google.maps.Marker({
-                    map: map,
-                    position: place.geometry.location,
-                    title: place.name,
-                    icon: photos[0].getUrl({'maxWidth': 50, 'maxHeight': 50})
-                  });
-                  google.maps.event.addListener(marker, 'click', function () {
-                    infoWindow.setContent(place.name + " : " + place.website);
-                    infoWindow.open(map, this);
-                  });
-                  found_places.push([place.name, place.formated_adress, place.icon]);
-                  console.log(place.name + place.formated_adress + place.icon);
-                }
-              });
-            }, j * 500);
-          })(i);
-        }
-      });*/
-      this._mineRadarSearch(() => {
-        this.ngZone.run( () => { console.log("length of global found_places now is " + found_places.length) });
+      this._mineRadarSearch(this, () => {
+        this.ngZone.run( () => { 
+			console.log("length of global found_places now is " + this.found_places.length) 
+			
+			if(this.found_places.length==0) this.information="No accomodation found!";
+			else {
+				this.information="Found "+this.found_places.length+" accomodations!";
+			}
+		});
       });
     });
   }
 
-  _mineRadarSearch(doneCallback: () => void){
+  _mineRadarSearch(comp:any, doneCallback: () => void){
 
     infoWindow = new google.maps.InfoWindow();
     service = new google.maps.places.PlacesService(map);
 
     request = {
       location: new google.maps.LatLng(this.city.lat, this.city.lng),
-      radius: 50,
+      radius: 500,
       type: 'lodging'
     };
-
     service.radarSearch(request, function (results: any, status: any) {
       if (status !== google.maps.places.PlacesServiceStatus.OK) {
-        console.error(status);
+        doneCallback();
         return;
       }
       console.log("radarSearch returned " + results.length + " results");
@@ -165,32 +133,36 @@ export class AccomodationComponent implements OnInit , AfterViewChecked {
           service = new google.maps.places.PlacesService(map);
           setTimeout(function () {
             service.getDetails(request1, function (place: any, status1: any) {
-              console.log("ENTERED CALLBACK2 " + place.place_id);
-              console.log("ENTERED CALLBACK2 " + place.name);
               if (status1 === google.maps.places.PlacesServiceStatus.OK) {
+				  console.log("ENTERED CALLBACK2 " + place.place_id);
+				  console.log("ENTERED CALLBACK2 " + place.name);
                 var photos = place.photos;
-                var marker = new google.maps.Marker({
+				
+                var marker1 = new google.maps.Marker({
                   map: map,
                   position: place.geometry.location,
                   title: place.name,
-                  icon: photos[0].getUrl({'maxWidth': 50, 'maxHeight': 50})
+                  icon: (undefined != photos)?photos[0].getUrl({'maxWidth': 50, 'maxHeight': 50}):'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+				  color:'#00f'
                 });
-                google.maps.event.addListener(marker, 'click', function () {
+                google.maps.event.addListener(marker1, 'click', function () {
                   infoWindow.setContent(place.name + " : " + place.website);
                   infoWindow.open(map, this);
                 });
-                found_places.push([place.name, place.formated_adress, place.icon]);
-                console.log(place.name + place.formated_adress + place.icon);
+				
+                comp.found_places.push({name:place.name, address:place.formatted_address, phone:place.formatted_phone_number,photo:(undefined != photos)?photos[0].getUrl({'maxWidth': 250, 'maxHeight': 250}):null,icon:place.icon});
+                //console.log(place);
+				doneCallback();
               }
             });
           }, j * 500);
         })(i);
       }
 
-      if(found_places.length === results.length) doneCallback();
+      if(comp.found_places.length === results.length) doneCallback();
       else{
         window.setTimeout(() => {
-        this._mineRadarSearch(doneCallback());
+			//comp._mineRadarSearch(comp,doneCallback);
       }, 10);
       }
     });

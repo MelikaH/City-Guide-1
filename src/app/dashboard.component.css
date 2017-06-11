@@ -61,7 +61,8 @@ h4 {
 }*/
 body { background-image: url(pls3.jpg);
 			background-size: cover;
-			position:fixed;
+			position:absolute;
+			
 		}
 
 		.inField {
@@ -118,5 +119,9 @@ body { background-image: url(pls3.jpg);
 					
 h1{
 	font-size:20px;
+}
+
+h2{
+	text-shadow:1px 1px 0 #fff;
 }
 .text-center {text-align:center;}

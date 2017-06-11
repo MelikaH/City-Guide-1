@@ -1,15 +1,15 @@
 #information{
-	width:35%;
+	width:43%;
 	height:600px;
 	float:left;
-	border:solid 10px white;
+	
 }
 
 #leftPanel{
-	width:65%;
+	width:60%;
 	height:600%;
 	float:right;
-	margin-left:10px;
+	
 }
 input {
   height: 2em;
@@ -17,6 +17,43 @@ input {
   padding-left: .4em;
   font-family: Calibri;
 }
+
+#button{
+	
+}
+
+#center{
+	width:1%;
+}
+#table-wrapper{
+	position:relative;
+	width:100%
+}
+
+#table-scroll{
+	
+	height:450px;
+	overflow:auto;
+	margin-top:20px;
+}
+
+#table-wrapper table{
+	border-collapse:collapse;
+	overflow:scroll;
+}
+#table-wrapper table th{
+	text-align:center;
+	background-color:#bf703f;
+	color:#fff
+	
+}
+
+#table-wrapper table td{
+	border:1px solid #e3e3e3;
+	padding:4px 2px 4px 2px;
+	text-align:center;
+}
+
 button {
   margin-top: 20px;
   font-family: Calibri;
