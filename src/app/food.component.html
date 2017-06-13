@@ -36,38 +36,61 @@
   </style>
 </head>
 <body>
-  <div class="flex-container">
-    <header>
-      <div id="header" style="position:center;font-size:larger;font-family:'SF UI Display'; width:100%" *ngIf="city">
-      <h1>Food Source</h1>
+<div class="flex-container">
+  <header>
+    <div id="header" style="position:center;font-size:larger;font-family:'SF UI Display'; width:100%" *ngIf="city">
+      <h1>Places to go out in {{city.name}}</h1>
+    </div>
+  </header>
+
+  <article *ngIf="city">
+    <p>Here you can find a lot of places in {{city.name}} that offer food or are just a place to sit down, relax and enjoy a cup of coffe, or even tea if you are not a coffe lover.</p>
+
+    <div id="information" style="text-align:left;text-align:left; font-family: 'SF UI Display' border-width:10px; border-height:10px">
+      <br>
+      <div id="table-scroll">
+        <div id="table-wrapper">
+          <table *ngIf="found_places.length>0" cellspacing="3" cellpadding="5" width="100%">
+            <thead>
+            <tr>
+              <th>Photo</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Phone</th>
+              <th>Web-page</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let hotel of found_places; let i = index;">
+              <td><img src="{{hotel.photo}}"/></td>
+              <td>{{hotel.name}}</td>
+              <td>{{hotel.address}}</td>
+              <td>{{hotel.phone}}</td>
+              <td><a href="{{hotel.url}}" target="_blank">Details about {{hotel.name}}</a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-    </header>
+    </div>
 
-      <article *ngIf="city">
-       
-        
 
-          <div id="information" style="text-align:left;text-align:left; font-family: 'SF UI Display' border-width:100px; border-height:100px">
-            <h3>More about properties in {{city.name}}</h3>
-            <p>{{city.name}} offers many properties for each pocket.</p>
-            <p> All of the properties in town are very popular among tourists.</p>
-            <p> Prices in {{city.name}} are not too expensive, but you can count on some expensive ones.</p>
-          </div>
-		  
-		<div id="center"></div>
-        
-      <div id="LeftPanel">
-	  <h5>Find your property on the map</h5>
-      <div id="map" style="position:relative;width:58%;height:549px; float:right">
-      </div></div>
-	  
-      <div id="button" style="text-align:center;font-family: 'SF UI Display'">
-        <button (click)="goBack()">Back</button>
-      </div>
-	  
 
-	  </article>
-    <footer> Copyright &copy; City-Guide B&H 2017</footer>
+    <div id="LeftPanel">
+      <h5>Find your property on the map</h5>
+
+    </div>
+    <div id="map" style="position:relative;width:45%;height:45vh; float:right">
+
+    </div>
+
+
+
+  </article>
+  <div id="button" style="text-align:center;font-family: 'SF UI Display'">
+    <button (click)="goBack()">Back</button>
   </div>
+  <footer> Copyright &copy; City-Guide B&amp;H 2017</footer>
+</div>
 </body>
 </html>

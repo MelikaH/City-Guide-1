@@ -44,50 +44,52 @@
     </header>
 
       <article *ngIf="city">
-       
-        
-     <div id="information" style="text-align:left;text-align:left; font-family: 'SF UI Display' border-width:100px; border-height:100px">
-        <h3>More about properties in {{city.name}}</h3>
-			<div>{{information}}</div> <br>
-				<div id="table-wrapper">
-					<div id="table-scroll">
-						<table *ngIf="found_places.length>0" cellspacing="3" cellpadding="5" width="33%" height="70">
+        <p>{{city.desc}}</p>
+
+     <div id="information" style="text-align:left;text-align:left; font-family: 'SF UI Display' border-width:10px; border-height:10px">
+       <br>
+				<div id="table-scroll">
+					<div id="table-wrapper">
+						<table *ngIf="found_places.length>0" cellspacing="3" cellpadding="5" width="100%">
 							<thead>
 								<tr>
+                  <th>Photo</th>
 									<th>Name</th>
 									<th>Address</th>
 									<th>Phone</th>
-									<th>Photo</th>
+									<th>Web-page</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr *ngFor="let hotel of found_places; let i = index;">
+                  <td><img src="{{hotel.photo}}"/></td>
 									<td>{{hotel.name}}</td>
 									<td>{{hotel.address}}</td>
 									<td>{{hotel.phone}}</td>
-									<td><img src="{{hotel.photo}}"/></td>
+                  <td><a href="{{hotel.url}}" target="_blank">Details about {{hotel.name}}</a></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
 			</div>
-				
 
-		<div id="center"></div>
-        
+
+
       <div id="LeftPanel">
 	  <h5>Find your property on the map</h5>
-        <div id="map" style="position:relative;width:50%;height:549px; float:right">
 
-      </div></div>
-	  <br>
-      <div id="button" style="text-align:center;font-family: 'SF UI Display'">
-        <button (click)="goBack()">Back</button>
       </div>
-	  
+        <div id="map" style="position:relative;width:45%;height:45vh; float:right">
+
+        </div>
+
+
 
 	  </article>
+    <div id="button" style="text-align:center;font-family: 'SF UI Display'">
+      <button (click)="goBack()">Back</button>
+    </div>
     <footer> Copyright &copy; City-Guide B&amp;H 2017</footer>
   </div>
 </body>

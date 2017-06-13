@@ -1,15 +1,15 @@
 #information{
-	width:43%;
-	height:600px;
+	width:50%;
+	height:450px;
 	float:left;
-	
+
 }
 
 #leftPanel{
 	width:60%;
 	height:600%;
 	float:right;
-	
+
 }
 input {
   height: 2em;
@@ -19,7 +19,7 @@ input {
 }
 
 #button{
-	
+
 }
 
 #center{
@@ -31,7 +31,6 @@ input {
 }
 
 #table-scroll{
-	
 	height:450px;
 	overflow:auto;
 	margin-top:20px;
@@ -45,7 +44,7 @@ input {
 	text-align:center;
 	background-color:#bf703f;
 	color:#fff
-	
+
 }
 
 #table-wrapper table td{
@@ -79,6 +78,6 @@ h1{
 	text-decoration:underline;
 	margin-right:12px;
 	text-shadow:3px 3px 0 #000;
-	
+
 }
 

@@ -69,36 +69,12 @@ export class AccomodationComponent implements OnInit , AfterViewChecked {
     });
 
     console.log("Start of added code");
-/*
-    infoWindow = new google.maps.InfoWindow();
-    service = new google.maps.places.PlacesService(map);
 
-    request = {
-      location: new google.maps.LatLng(this.city.lat, this.city.lng),
-      radius: 50,
-      type: 'lodging'
-    };*/
-
-    /*
-     console.log("exited for with found going to copy to found places, length of found is " + found.length);
-
-     for(var i = 0; i < found.length; i++) {
-     console.log("copying " + found[i] + " from found to found_places");
-
-     this.found_places.push(found[i]);
-
-     console.log("copied to found places, " + this.found_places[i]);
-     }
-
-
-     console.log("should have coppied to found_places " + found_places.length);
-
-     }*/
     this.ngZone.runOutsideAngular(() => {
       this._mineRadarSearch(this, () => {
-        this.ngZone.run( () => { 
-			console.log("length of global found_places now is " + this.found_places.length) 
-			
+        this.ngZone.run( () => {
+			console.log("length of global found_places now is " + this.found_places.length)
+
 			if(this.found_places.length==0) this.information="No accomodation found!";
 			else {
 				this.information="Found "+this.found_places.length+" accomodations!";
@@ -115,7 +91,7 @@ export class AccomodationComponent implements OnInit , AfterViewChecked {
 
     request = {
       location: new google.maps.LatLng(this.city.lat, this.city.lng),
-      radius: 500,
+      radius: 1000,
       type: 'lodging'
     };
     service.radarSearch(request, function (results: any, status: any) {
@@ -137,7 +113,7 @@ export class AccomodationComponent implements OnInit , AfterViewChecked {
 				  console.log("ENTERED CALLBACK2 " + place.place_id);
 				  console.log("ENTERED CALLBACK2 " + place.name);
                 var photos = place.photos;
-				
+
                 var marker1 = new google.maps.Marker({
                   map: map,
                   position: place.geometry.location,
@@ -149,8 +125,8 @@ export class AccomodationComponent implements OnInit , AfterViewChecked {
                   infoWindow.setContent(place.name + " : " + place.website);
                   infoWindow.open(map, this);
                 });
-				
-                comp.found_places.push({name:place.name, address:place.formatted_address, phone:place.formatted_phone_number,photo:(undefined != photos)?photos[0].getUrl({'maxWidth': 250, 'maxHeight': 250}):null,icon:place.icon});
+
+                comp.found_places.push({name:place.name, url:place.url, address:place.formatted_address, phone:place.formatted_phone_number,photo:(undefined != photos)?photos[0].getUrl({'maxWidth': 250, 'maxHeight': 250}):null,icon:place.icon});
                 //console.log(place);
 				doneCallback();
               }
