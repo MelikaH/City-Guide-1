@@ -46,7 +46,13 @@ describe('login page', function() {
     expect( element(by.type('text') ).getText() ).toEqual( params.login.user );
   });
 
-});
+	it('h2 reacts on input', function(){
+		element(by.id("search")).sendKeys("Fojnica");
+		element(by.id("effectiveOne")).getText().then(function(text){
+			expect(text).toContain("Fojnica")
+		});
+	});
+
   it('Typing in Travnik and clicking GO goes to Travnik details page', function () {
     element(by.id('search')).clear();
     element(by.id('search')).sendKeys('Travnik');
@@ -68,6 +74,44 @@ describe('login page', function() {
     expect(browser.getCurrentUrl()).toContain('dashboard');
   });
 
+});
+
+describe("testing using css expressions", function(){
+	beforeEach(function(){
+		browser.get("http://localhost:3000/dashboard");
+		});
+		
+	it("button reactions", funtion(){
+		element(by.css('input')).sendKeys("Mostar");
+		element(by.css('button')).click();
+		element(by.css('button')).click();
+		expect(browser.getCurrentUrl()).toEqual("http://localhost:3000/dashboard");
+	});
+	
+	it("going to the accomodation page", function(){
+		element(by.css('input')).sendKeys("Banja Luka");
+		element(by.css('button')).click();
+		var nortonlink=element(by.css('[href="/accomod/11"]'));
+		nortonlink.click();
+		expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/accomod/11');
+	});
+	
+	it("going to the food page", function(){
+		element(by.css('input')).sendKeys("Banja Luka");
+		element(by.css('button')).click();
+		var nortonlink=element(by.css('[href="/food/11"]'));
+		nortonlink.click();
+		expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/food/11');
+	});
+	it("going to the places page", function(){
+		element(by.css('input')).sendKeys("Banja Luka");
+		element(by.css('button')).click();
+		var nortonlink=element(by.css('[href="/places/11"]'));
+		nortonlink.click();
+		expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/places/11');
+	});
+		
+	
 });
 
 

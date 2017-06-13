@@ -18,9 +18,7 @@ input {
   font-family: Calibri;
 }
 
-#button{
 
-}
 
 #center{
   width:1%;
@@ -42,7 +40,7 @@ input {
 }
 #table-wrapper table th{
   text-align:center;
-  background-color:#003B65;
+  background-color:#D42C16;
   color:#fff
 
 }
