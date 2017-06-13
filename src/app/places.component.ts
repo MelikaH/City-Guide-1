@@ -75,9 +75,9 @@ export class PlacesComponent implements OnInit , AfterViewChecked {
         this.ngZone.run( () => {
           console.log("length of global found_places now is " + this.found_places.length)
 
-          if(this.found_places.length==0) this.information="No accomodation found!";
+          if(this.found_places.length==0) this.information="No places found!";
           else {
-            this.information="Found "+this.found_places.length+" accomodations!";
+            this.information="Found "+this.found_places.length+" places!";
           }
         });
       });
