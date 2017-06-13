@@ -1,3 +1,6 @@
+header{
+	background-color:rgba(14, 61, 108, 0.26);
+}
 .selected {
   background-color: #CFD8DC !important;
   color: white;

@@ -18,7 +18,7 @@
     .article {
       text-align: left;
     }
-    header {height: 250px; color:black;}
+    header {height: 150px; color:black;}
     footer {background: #aaa;color:white;}
     .nav {background:#eee;}
     .nav ul {
@@ -39,19 +39,59 @@
 <div class="flex-container">
   <header>
     <h2>We apologise but that city does not seem to be in our data.</h2>
-    <h2>Remember we only support cities in Bosnia and Herzegowina.</h2>
-    <h2>Here is a list of all cities that we offer informations about hope it will help you.</h2>
+    <h2>Remember, we only support cities in Bosnia and Herzegovina.</h2>
+    <h2>Here is a list of all cities that we offer informations about. We hope it will help you.</h2>
   </header>
 
   <article >
-    <p>  </p>
-    <ul class="cities">
-      <li *ngFor="let city of cities">
-        <a [routerLink]="['/detail', city.id]" class="badge">{{city.id}}</a>{{city.name}}
-      </li>
-    </ul>
+	<table>
+	<tr>
+		<td>	
+			<ul class="cities">
+			  <li *ngFor="let city of cities | slice:0:13; ">
+				<a [routerLink]="['/detail', city.id]" class="badge">{{city.id}}</a>{{city.name}}
+			  </li>
+			</ul>
+		</td>	
+	
+		<td>	
+			<ul class="cities">
+			  <li *ngFor="let city of cities | slice:13:26; ">
+				<a [routerLink]="['/detail', city.id]" class="badge">{{city.id}}</a>{{city.name}}
+			  </li>
+			</ul>
+		</td>	
+	
+		<td>	
+			<ul class="cities">
+			  <li *ngFor="let city of cities | slice:26:39; ">
+				<a [routerLink]="['/detail', city.id]" class="badge">{{city.id}}</a>{{city.name}}
+			  </li>
+			</ul>
+			
+		</td>	
+	
+		<td>	
+			<ul class="cities">
+			  <li *ngFor="let city of cities | slice:39:52; ">
+				<a [routerLink]="['/detail', city.id]" class="badge">{{city.id}}</a>{{city.name}}
+			  </li>
+			</ul>
+		</td>	
+		
+		<td>	
+			<ul class="cities">
+			  <li *ngFor="let city of cities | slice:52:63; ">
+				<a [routerLink]="['/detail', city.id]" class="badge">{{city.id}}</a>{{city.name}}
+			  </li>
+			</ul>
+		</td>	
+		
+	</tr>
+ 
+    
 
-
+	</table>
   </article>
   <div id="button" style="text-align:center;font-family: 'SF UI Display'">
     <button (click)="goBack()">Back</button>
