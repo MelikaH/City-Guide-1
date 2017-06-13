@@ -25,16 +25,17 @@ export class DashboardComponent implements OnInit {
       this.choice = this.stateService.getChoice();
   }
 
-  /*
-    FOUND CITY IZ NEKOG RAZLOGA VRACA VRIJEDNOSTI
-    !!!!!! ALI GO BUTTON FUNKCIONISE PRAVILNO TEK NAKON DRUGOG PRITISKANJA
-   */
   goToChoice(c: string) {
       this.stateService.setChoice(c);
       this.cityService.getCity(c).then((found_city) => {
-        this.found_city = found_city;
-        this.id = this.found_city.id;
-        this.router.navigate(['./detail/', this.id]);
+        if(found_city === undefined)
+        {
+          this.router.navigate(['./notfound']);
+        }else {
+          this.found_city = found_city;
+          this.id = this.found_city.id;
+          this.router.navigate(['./detail/', this.id]);
+        }
       });
   }
 }

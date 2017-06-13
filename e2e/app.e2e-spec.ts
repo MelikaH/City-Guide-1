@@ -5,7 +5,7 @@ import {browser, by, element} from "protractor";
 
 describe("test of home page", function () {
 
-  let expectedMsg = 'Welcome to the City-Guide!';
+  let expectedMsg = 'Welcome to the City-Guide!Please enter the city.';
   beforeEach(function (){
     browser.get("http://localhost:3000/dashboard");
   });
@@ -36,23 +36,6 @@ describe('test for input ', function () {
     expect(browser.getCurrentUrl()).toContain('detail/1');
   });
 
-describe('login page', function() {
-
-  var params = browser.params;
-
-  it('should login successfully', function() {
-    element( by.id('search') ).sendKeys( params.login.user );
-    element( by.id('goBtn') ).click();
-    expect( element(by.type('text') ).getText() ).toEqual( params.login.user );
-  });
-
-	it('h2 reacts on input', function(){
-		element(by.id("search")).sendKeys("Fojnica");
-		element(by.id("effectiveOne")).getText().then(function(text){
-			expect(text).toContain("Fojnica")
-		});
-	});
-
   it('Typing in Travnik and clicking GO goes to Travnik details page', function () {
     element(by.id('search')).clear();
     element(by.id('search')).sendKeys('Travnik');
@@ -67,11 +50,11 @@ describe('login page', function() {
     expect(browser.getCurrentUrl()).toContain('detail/5');
   });
 
-  it('Typing in non existant city leads to nowhere', function () {
+  it('Typing in non existant city leads to notfound page', function () {
     element(by.id('search')).clear();
     element(by.id('search')).sendKeys('New York');
     element(by.id('goBtn')).click();
-    expect(browser.getCurrentUrl()).toContain('dashboard');
+    expect(browser.getCurrentUrl()).toContain('notfound');
   });
 
 });
