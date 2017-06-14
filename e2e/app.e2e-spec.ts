@@ -24,7 +24,6 @@ describe("test of home page", function () {
 
 });
 
-
 describe('test for input ', function () {
 
   beforeEach(function (){
@@ -58,44 +57,277 @@ describe('test for input ', function () {
   });
 
 });
+describe('tests for city-detail page', function () {
 
-describe("testing using css expressions", function(){
-	beforeEach(function(){
-		browser.get("http://localhost:3000/dashboard");
-		});
-		
-	it("button reactions", funtion(){
-		element(by.css('input')).sendKeys("Mostar");
-		element(by.css('button')).click();
-		element(by.css('button')).click();
-		expect(browser.getCurrentUrl()).toEqual("http://localhost:3000/dashboard");
-	});
-	
-	it("going to the accomodation page", function(){
-		element(by.css('input')).sendKeys("Banja Luka");
-		element(by.css('button')).click();
-		var nortonlink=element(by.css('[href="/accomod/11"]'));
-		nortonlink.click();
-		expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/accomod/11');
-	});
-	
-	it("going to the food page", function(){
-		element(by.css('input')).sendKeys("Banja Luka");
-		element(by.css('button')).click();
-		var nortonlink=element(by.css('[href="/food/11"]'));
-		nortonlink.click();
-		expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/food/11');
-	});
-	it("going to the places page", function(){
-		element(by.css('input')).sendKeys("Banja Luka");
-		element(by.css('button')).click();
-		var nortonlink=element(by.css('[href="/places/11"]'));
-		nortonlink.click();
-		expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/places/11');
-	});
-		
-	
+  beforeEach(function () {
+    browser.get("http://localhost:3000/detail/1");
+  });
+
+  it('test whether city-detail photo exists', function () {
+    element(by.id('search')).sendKeys('Sarajevo');
+    element(by.id('detailCityPhoto')).isPresent();
+    expect(browser.getCurrentUrl()).toEqual(true);
+  });
+  it('test whether accomodation field exists', function () {
+    element(by.id('search')).sendKeys('Sarajevo');
+    element(by.id('accomod')).isPresent();
+    expect(browser.getCurrentUrl()).toEqual(true);
+  });
+
+  it('test whether map field exists', function () {
+    element(by.id('search')).sendKeys('Sarajevo');
+    element(by.id('map')).isPresent();
+    expect(browser.getCurrentUrl()).toEqual(true);
+  });
+  it('test whether food field exists', function () {
+    element(by.id('search')).sendKeys('Sarajevo');
+    element(by.id('food')).isPresent();
+    expect(browser.getCurrentUrl()).toContain('food/1');
+  });
+  it('test whether place field exists', function () {
+    element(by.id('search')).sendKeys('Sarajevo');
+    element(by.id('place')).isPresent();
+    expect(browser.getCurrentUrl()).toContain('place/1');
+  });
+  it('test whether back button returns to the dashboard', function () {
+    element(by.id('search')).sendKeys('Sarajevo');
+    element(by.id('button')).click();
+    expect(browser.getCurrentUrl()).toContain('dashboard');
+  });
+  it('test whether it directs to accomodation', function () {
+    element(by.id('search')).sendKeys('Sarajevo');
+    element(by.id('accomod')).click();
+    expect(browser.getCurrentUrl()).toContain('accomod/1');
+  });
+  it('test whether it directs to place', function () {
+    element(by.id('search')).sendKeys('Sarajevo');
+    element(by.id('places')).click();
+    expect(browser.getCurrentUrl()).toContain('place/1');
+  });
+  it('test whether it directs to food', function () {
+    element(by.id('search')).sendKeys('Sarajevo');
+    element(by.id('food')).click();
+    expect(browser.getCurrentUrl()).toContain('food/1');
+  });
+
+  describe('tests for accomodation-detail page', function () {
+
+    beforeEach(function () {
+      browser.get("http://localhost:3000/accomod/1");
+    });
+
+    it('test whether accomodation-detail photo exists', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('header')).isPresent();
+      expect(browser.getCurrentUrl()).toEqual(true);
+    });
+
+    it('test whether map field exists', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('map')).isPresent();
+      expect(browser.getCurrentUrl()).toEqual(true);
+    });
+
+    it('test whether information field exists', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('information')).isPresent();
+      expect(browser.getCurrentUrl()).toEqual(true);
+    });
+
+    it('test whether table field exists', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('table-wrapper')).isPresent();
+      expect(browser.getCurrentUrl()).toEqual(true);
+    });
+
+    it('test whether scroller field exists', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('table-scroll')).isPresent();
+      expect(browser.getCurrentUrl()).toEqual(true);
+    });
+
+    it('test whether scroller works', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('table-scroll')).click();
+      expect(browser.getCurrentUrl()).toContain('accomod/1');
+    });
+
+    it('test whether table contains elements', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('table-wrapper')).toContain();
+      expect(browser.getCurrentUrl()).toContain('accomod/1');
+    });
+
+    it('test whether back button returns to the detail page', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('button')).click();
+      expect(browser.getCurrentUrl()).toContain('detail/1');
+    });
+
+    it('test whether back button returns to the dashboard page', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('button')).click();
+      element(by.id('button')).click();
+      expect(browser.getCurrentUrl()).toContain('dashboard');
+    });
+    it('test whether back button returns to the detail page and goes to places', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('button')).click();
+      element(by.id('places')).click();
+      expect(browser.getCurrentUrl()).toContain('places/1');
+    });
+    it('test whether back button returns to the detail page and goes to food', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('button')).click();
+      element(by.id('food')).click();
+      expect(browser.getCurrentUrl()).toContain('food/1');
+    });
+  });
+
+  describe('tests for food-detail page', function () {
+
+    beforeEach(function () {
+      browser.get("http://localhost:3000/food/1");
+    });
+
+    it('test whether food-detail photo exists', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('header')).isPresent();
+      expect(browser.getCurrentUrl()).toEqual(true);
+    });
+
+    it('test whether map field exists', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('map')).isPresent();
+      expect(browser.getCurrentUrl()).toEqual(true);
+    });
+
+    it('test whether information field exists', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('information')).isPresent();
+      expect(browser.getCurrentUrl()).toEqual(true);
+    });
+
+    it('test whether table field exists', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('table-wrapper')).isPresent();
+      expect(browser.getCurrentUrl()).toEqual(true);
+    });
+
+    it('test whether scroller field exists', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('table-scroll')).isPresent();
+      expect(browser.getCurrentUrl()).toEqual(true);
+    });
+
+    it('test whether scroller works', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('table-scroll')).click();
+      expect(browser.getCurrentUrl()).toContain('food/1');
+    });
+
+    it('test whether table contains elements', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('table-wrapper')).toContain();
+      expect(browser.getCurrentUrl()).toContain('food/1');
+    });
+
+    it('test whether back button returns to the detail page', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('button')).click();
+      expect(browser.getCurrentUrl()).toContain('detail/1');
+    });
+
+    it('test whether back button returns to the dashboard page', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('button')).click();
+      element(by.id('button')).click();
+      expect(browser.getCurrentUrl()).toContain('dashboard');
+    });
+    it('test whether back button returns to the detail page and goes to places', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('button')).click();
+      element(by.id('places')).click();
+      expect(browser.getCurrentUrl()).toContain('places/1');
+    });
+    it('test whether back button returns to the detail page and goes to accomodation', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('button')).click();
+      element(by.id('accomodation')).click();
+      expect(browser.getCurrentUrl()).toContain('accomod/1');
+    });
+  });
+  describe('tests for places-detail page', function () {
+
+    beforeEach(function () {
+      browser.get("http://localhost:3000/places/1");
+    });
+
+    it('test whether places-detail photo exists', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('header')).isPresent();
+      expect(browser.getCurrentUrl()).toEqual(true);
+    });
+
+    it('test whether map field exists', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('map')).isPresent();
+      expect(browser.getCurrentUrl()).toEqual(true);
+    });
+
+    it('test whether information field exists', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('information')).isPresent();
+      expect(browser.getCurrentUrl()).toEqual(true);
+    });
+
+    it('test whether table field exists', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('table-wrapper')).isPresent();
+      expect(browser.getCurrentUrl()).toEqual(true);
+    });
+
+    it('test whether scroller field exists', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('table-scroll')).isPresent();
+      expect(browser.getCurrentUrl()).toEqual(true);
+    });
+
+    it('test whether scroller works', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('table-scroll')).click();
+      expect(browser.getCurrentUrl()).toContain('food/1');
+    });
+
+    it('test whether table contains elements', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('table-wrapper')).toContain();
+      expect(browser.getCurrentUrl()).toContain('food/1');
+    });
+
+    it('test whether back button returns to the detail page', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('button')).click();
+      expect(browser.getCurrentUrl()).toContain('detail/1');
+    });
+
+    it('test whether back button returns to the dashboard page', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('button')).click();
+      element(by.id('button')).click();
+      expect(browser.getCurrentUrl()).toContain('dashboard');
+    });
+    it('test whether back button returns to the detail page and goes to food', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('button')).click();
+      element(by.id('food')).click();
+      expect(browser.getCurrentUrl()).toContain('food/1');
+    });
+    it('test whether back button returns to the detail page and goes to accomodation', function () {
+      element(by.id('search')).sendKeys('Sarajevo');
+      element(by.id('button')).click();
+      element(by.id('accomod')).click();
+      expect(browser.getCurrentUrl()).toContain('accomod/1');
+    });
+  });
 });
-
-
-
