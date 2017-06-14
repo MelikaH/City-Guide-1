@@ -37,8 +37,8 @@
 </head>
 <body>
 
-<div class="flex-container" *ngIf="city">
-  <header id="detailCityPhoto" [style.background-image]="'url(' + city.image + ')'" [style.background-size]="'cover'">
+<div class="flex-container" id="detailCityPhoto" *ngIf="city">
+  <header [style.background-image]="'url(' + city.image + ')'" [style.background-size]="'cover'">
     <h1>City Gallery</h1>
   </header>
 
@@ -47,16 +47,16 @@
       <h2>{{city.name}} details:</h2>
 		<div id="nav_wrapper">
 			<ul>
-				<li><a [routerLink]="['/accomod', city.id]">Accommodation</a></li>
-				<li><a [routerLink]="['/food', city.id]">Food</a></li>
-				<li><a [routerLink]="['/places', city.id]">Places</a></li>
+				<li id="accomod"><a [routerLink]="['/accomod', city.id]" >Accommodation</a></li>
+				<li id="food"><a [routerLink]="['/food', city.id]" >Food </a></li>
+				<li id="places"><a [routerLink]="['/places', city.id]"> Places</a></li>
 			</ul>
 		</div>
 
       <div id="map" style="position:center;width:100%;height:450px">
       </div>
 
-      <button (click)="goBack()">Back</button>
+      <button id="button" (click)="goBack()">Back</button>
     </div>
   </article>
 
