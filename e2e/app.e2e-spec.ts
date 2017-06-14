@@ -64,10 +64,10 @@ describe('tests for city-detail page', function () {
   });
 
   it('test whether city-detail photo exists', function () {
-    element(by.id('search')).sendKeys('Sarajevo');
-    element(by.id('detailCityPhoto')).isPresent();
-    expect(browser.getCurrentUrl()).toEqual(true);
+
+    expect(element(by.id('detailCityPhoto')).isPresent()).toEqual(true);
   });
+
   it('test whether accomodation field exists', function () {
     element(by.id('search')).sendKeys('Sarajevo');
     element(by.id('accomod')).isPresent();
